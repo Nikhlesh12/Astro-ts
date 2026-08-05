@@ -284,6 +284,7 @@ body.cosmic .topbar {
   align-items: center;
   gap: 1.6rem;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .main-nav a {
@@ -291,6 +292,28 @@ body.cosmic .topbar {
   color: var(--text-secondary);
   font-size: 0.95rem;
   transition: color 0.3s ease;
+}
+
+.nav-close {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--glass);
+  color: var(--text);
+  font-size: 1.4rem;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.nav-close:hover {
+  transform: translateY(-2px);
 }
 
 .main-nav a::after {
@@ -613,6 +636,7 @@ body.cosmic .featured-card { background: rgba(255,255,255,0.06); }
   }
   .main-nav a::after { display: none; }
   .main-nav a + a { margin-top: 0.65rem; }
+  .nav-close { display: inline-flex; }
   .menu-toggle { display: inline-flex; }
   .topbar { position: relative; }
   .nav-actions { position: relative; z-index: 46; }
