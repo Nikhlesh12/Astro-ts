@@ -658,8 +658,10 @@ body.cosmic .featured-card { background: rgba(255,255,255,0.06); }
   }
   .main-nav a::after { display: none; }
   .main-nav a + a { margin-top: 0.65rem; }
-  .nav-close { display: inline-flex; }
+  .main-nav .nav-close { display: none; }
+  .main-nav.open .nav-close { display: inline-flex; }
   .menu-toggle { display: inline-flex; }
+  .main-nav.open ~ .nav-actions .menu-toggle { display: none; }
   .topbar { position: relative; }
   .nav-actions { position: relative; z-index: 46; }
   .theme-switch {
