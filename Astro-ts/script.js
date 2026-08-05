@@ -1,4 +1,4 @@
-﻿const loader = document.getElementById('loader');
+const loader = document.getElementById('loader');
 const bookingForm = document.getElementById('bookingForm');
 const nextStep = document.getElementById('nextStep');
 const prevStep = document.getElementById('prevStep');
@@ -7,7 +7,6 @@ const bookingProgressBar = document.getElementById('bookingProgressBar');
 const bookingProgressLabel = document.getElementById('bookingProgressLabel');
 const cursorWrap = document.getElementById('cursor');
 const cursorLabel = cursorWrap.querySelector('.cursor-label');
-const interactiveItems = document.querySelectorAll('.interactive');
 const themeToggle = document.querySelector('[data-theme-toggle]');
 const menuToggle = document.querySelector('.menu-toggle');
 const mainNav = document.querySelector('.main-nav');
@@ -18,6 +17,7 @@ const lightboxClose = document.getElementById('lightboxClose');
 let activeStep = 0;
 const storedTheme = localStorage.getItem('ts-theme');
 const prefersDark = window.matchMedia?.('(prefers-color-scheme: dark)').matches;
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 let themeActive = storedTheme ? storedTheme === 'cosmic' : prefersDark;
 let cursorPosition = { x: 0, y: 0 };
 
@@ -95,9 +95,15 @@ menuToggle.addEventListener('click', () => {
   menuToggle.setAttribute('aria-expanded', expanded);
 });
 
+const cursorTarget = { x: 0, y: 0 };
+let cursorEnabled = true;
+let cursorNeedsUpdate = false;
+let scrollNeedsUpdate = false;
+
 const handleMouseMove = (event) => {
-  cursorPosition = { x: event.clientX, y: event.clientY };
-  cursorWrap.style.transform = `translate3d(${cursorPosition.x}px, ${cursorPosition.y}px, 0)`;
+  cursorTarget.x = event.clientX;
+  cursorTarget.y = event.clientY;
+  cursorNeedsUpdate = true;
 };
 
 const handleMouseOver = (event) => {
@@ -114,8 +120,23 @@ const handleMouseOut = () => {
 };
 
 const handleScroll = () => {
-  const scrollProgress = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-  progressBar.style.width = `${scrollProgress}%`;
+  scrollNeedsUpdate = true;
+};
+
+const rafUpdate = () => {
+  if (cursorNeedsUpdate && cursorEnabled) {
+    cursorNeedsUpdate = false;
+    cursorWrap.style.transform = `translate3d(${cursorTarget.x}px, ${cursorTarget.y}px, 0)`;
+  }
+
+  if (scrollNeedsUpdate) {
+    scrollNeedsUpdate = false;
+    const totalScrollable = document.body.scrollHeight - window.innerHeight;
+    const scrollProgress = totalScrollable > 0 ? (window.scrollY / totalScrollable) * 100 : 0;
+    progressBar.style.width = `${scrollProgress}%`;
+  }
+
+  requestAnimationFrame(rafUpdate);
 };
 
 const revealObserver = new IntersectionObserver((entries) => {
@@ -128,16 +149,21 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal-hidden').forEach((item) => revealObserver.observe(item));
 
-window.addEventListener('mousemove', handleMouseMove);
-window.addEventListener('mouseover', handleMouseOver);
-window.addEventListener('mouseout', handleMouseOut);
-window.addEventListener('scroll', handleScroll);
+if (!isTouchDevice) {
+  window.addEventListener('mousemove', handleMouseMove);
+  window.addEventListener('mouseover', handleMouseOver);
+  window.addEventListener('mouseout', handleMouseOut);
+}
+window.addEventListener('scroll', handleScroll, { passive: true });
 window.addEventListener('load', () => {
-  cursorWrap.classList.add('active');
+  if (!isTouchDevice) {
+    cursorWrap.classList.add('active');
+    requestAnimationFrame(rafUpdate);
+  }
 
   setTimeout(() => {
     loader.classList.add('loader-hidden');
-  }, 900);
+  }, 400);
 
   setTheme(themeActive);
   updateBookingUI();
