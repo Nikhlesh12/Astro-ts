@@ -95,6 +95,15 @@ menuToggle.addEventListener('click', () => {
   menuToggle.setAttribute('aria-expanded', expanded);
 });
 
+mainNav.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => {
+    if (mainNav.classList.contains('open')) {
+      mainNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
+
 const cursorTarget = { x: 0, y: 0 };
 let cursorEnabled = true;
 let cursorNeedsUpdate = false;
