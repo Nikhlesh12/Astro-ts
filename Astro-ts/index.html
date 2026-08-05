@@ -1,0 +1,480 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TS | Divine Astrology Experience</title>
+  <meta name="description" content="TS is a premium astrology and wellness brand delivering bespoke consultations, personalised remedies, and luxury astrological guidance." />
+  <meta property="og:title" content="TS Astrology | Premium Astrology & Lifestyle" />
+  <meta property="og:description" content="Experience premium astrology consultations with a modern luxury interface, booking flow, and bespoke guidance." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="./" />
+  <meta property="og:image" content="LOGO.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="LOGO.png" />
+  <meta name="theme-color" content="#d4af37" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="loader" id="loader">
+    <div class="loader-glow"></div>
+    <div class="loader-panel">
+      <img src="LOGO.png" alt="TS Logo" class="loader-logo" loading="lazy" decoding="async" />
+      <div class="loader-copy">
+        <span>TS</span>
+        <p>Curating premium astrology experiences.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cursor-wrap" id="cursor">
+    <div class="cursor-ring"></div>
+    <div class="cursor-core"></div>
+    <span class="cursor-label">View</span>
+  </div>
+
+  <div class="page-shell">
+    <div class="progress-track" aria-hidden="true">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <header class="topbar">
+      <div class="brand-wrap">
+        <a href="#home" class="brand-link interactive" data-cursor-label="View">
+          <img src="LOGO.png" alt="TS Logo" class="brand-logo" loading="lazy" decoding="async" />
+          <span class="brand-name">TS</span>
+        </a>
+      </div>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a class="interactive" href="#why" data-cursor-label="View">Why TS</a>
+        <a class="interactive" href="#services" data-cursor-label="View">Services</a>
+        <a class="interactive" href="#process" data-cursor-label="View">Process</a>
+        <a class="interactive" href="#gallery" data-cursor-label="View">Gallery</a>
+        <a class="interactive" href="#pricing" data-cursor-label="View">Pricing</a>
+        <a class="interactive" href="#contact" data-cursor-label="Book">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-switch interactive" type="button" aria-label="Toggle theme" data-theme-toggle data-cursor-label="View">
+          <span class="theme-icon"></span>
+          <span class="theme-label">Divine</span>
+        </button>
+        <a class="button button-primary interactive" href="#contact" data-cursor-label="Book">Book Consultation</a>
+        <button class="menu-toggle interactive" type="button" aria-label="Open menu" data-cursor-label="View">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="hero-background"></div>
+      <div class="hero-decorations" aria-hidden="true">
+        <div class="star star-1"></div>
+        <div class="star star-2"></div>
+        <div class="star star-3"></div>
+        <div class="zodiac zodiac-1">♈</div>
+        <div class="zodiac zodiac-2">♎</div>
+        <div class="zodiac zodiac-3">♐</div>
+        <div class="constellation constellation-1"></div>
+        <div class="constellation constellation-2"></div>
+      </div>
+      <div class="hero-grid">
+        <div class="hero-copy reveal-hidden">
+          <span class="eyebrow">Luxury Astrology & Wellness</span>
+          <h1>Every destiny deserves a crafted celestial vision.</h1>
+          <p>TS blends premium astrological precision with modern wellness to guide your highest life chapter through insight, ritual, and elegant support.</p>
+          <div class="hero-actions">
+            <a class="button button-primary interactive" href="#contact" data-cursor-label="Book">Book Consultation</a>
+            <a class="button button-secondary interactive" href="https://wa.me" data-cursor-label="Talk">Talk on WhatsApp</a>
+          </div>
+          <div class="hero-meta">
+            <div class="hero-meta-item">
+              <strong>98%</strong>
+              <span>Client joy rating</span>
+            </div>
+            <div class="hero-meta-item">
+              <strong>12+</strong>
+              <span>Years of mastery</span>
+            </div>
+            <div class="hero-meta-item">
+              <strong>Global</strong>
+              <span>Premium clientele</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal-hidden">
+          <div class="hero-panel glass-card">
+            <span class="panel-label">Soul Path Reading</span>
+            <p>Holistic guidance for the next chapter with layered astrological clarity.</p>
+          </div>
+          <div class="hero-planet"></div>
+          <div class="hero-wheel"></div>
+          <div class="floating-card card-small glass-card interactive" data-cursor-label="View">
+            <span>Love</span>
+            <strong>Tarot Harmony</strong>
+          </div>
+          <div class="floating-card card-alt glass-card interactive" data-cursor-label="View">
+            <span>Career</span>
+            <strong>Kundli Precision</strong>
+          </div>
+        </div>
+      </div>
+      <div class="hero-wave"></div>
+    </section>
+
+    <section class="section surface" id="why">
+      <div class="section-intro reveal-hidden">
+        <span class="eyebrow">Why Choose TS</span>
+        <h2>Designed for discerning individuals who expect clarity, elegance, and results.</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card reveal-hidden">
+          <span class="feature-mark">01</span>
+          <h3>Personalised celestial architecture</h3>
+          <p>Every reading is tailored with refined ritual, timing, and bespoke remedies that align with your unique chart.</p>
+        </article>
+        <article class="feature-card reveal-hidden">
+          <span class="feature-mark">02</span>
+          <h3>Premium guidance with tangible ease</h3>
+          <p>Navigate love, health, career, and legacy through a calm process crafted for trust and modern luxury.</p>
+        </article>
+        <article class="feature-card reveal-hidden">
+          <span class="feature-mark">03</span>
+          <h3>Global astrology expertise</h3>
+          <p>Our advisors combine timeless tradition with thoughtful global service for a truly international experience.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="section-intro reveal-hidden">
+        <span class="eyebrow">Our Services</span>
+        <h2>Every ritual, consultation, and forecast is crafted for elevated impact.</h2>
+      </div>
+      <div class="service-grid">
+        <article class="service-card reveal-hidden">
+          <h3>Kundli & Birth Chart</h3>
+          <p>Deep natal analysis with actionable insights for your life’s design.</p>
+        </article>
+        <article class="service-card reveal-hidden">
+          <h3>Marriage Astrology</h3>
+          <p>Compatibility mapping and premium relationship timing for soulful unions.</p>
+        </article>
+        <article class="service-card reveal-hidden">
+          <h3>Career Direction</h3>
+          <p>Professional clarity and opportunity forecasting that feels grounded and expansive.</p>
+        </article>
+        <article class="service-card reveal-hidden">
+          <h3>Business & Finance</h3>
+          <p>Strategic financial forecasts and business alignment for confident decisions.</p>
+        </article>
+        <article class="service-card reveal-hidden">
+          <h3>Love & Relationship</h3>
+          <p>Heart-centered readings to illuminate your most intimate connections.</p>
+        </article>
+        <article class="service-card reveal-hidden">
+          <h3>Health & Wellness</h3>
+          <p>Mindful astrological health guidance that honours body, spirit, and rhythm.</p>
+        </article>
+        <article class="service-card reveal-hidden">
+          <h3>Numerology</h3>
+          <p>Number-led insights to reveal practical timing, personality and purpose.</p>
+        </article>
+        <article class="service-card reveal-hidden">
+          <h3>Vastu & Space</h3>
+          <p>Environmental alignment for homes and offices with refined energy flow.</p>
+        </article>
+      </div>
+      <div class="section-wave section-wave--inverted"></div>
+    </section>
+
+    <section class="section surface" id="process">
+      <div class="section-intro reveal-hidden">
+        <span class="eyebrow">Consultation Process</span>
+        <h2>Seven meticulous steps designed to make booking feel effortless.</h2>
+      </div>
+      <div class="process-grid">
+        <article class="process-step reveal-hidden">
+          <span>01</span>
+          <h3>Choose Service</h3>
+          <p>Select the most resonant consultation for your current journey.</p>
+        </article>
+        <article class="process-step reveal-hidden">
+          <span>02</span>
+          <h3>Choose Astrologer</h3>
+          <p>Review our expert advisors and select the one who best matches your intention.</p>
+        </article>
+        <article class="process-step reveal-hidden">
+          <span>03</span>
+          <h3>Choose Date</h3>
+          <p>Set a premium appointment aligned with your schedule and astrological timing.</p>
+        </article>
+        <article class="process-step reveal-hidden">
+          <span>04</span>
+          <h3>Choose Time</h3>
+          <p>Reserve your moment with a refined, flexible timeline.</p>
+        </article>
+        <article class="process-step reveal-hidden">
+          <span>05</span>
+          <h3>Fill Details</h3>
+          <p>Secure your session with an elegant, intuitive form experience.</p>
+        </article>
+        <article class="process-step reveal-hidden">
+          <span>06</span>
+          <h3>Payment</h3>
+          <p>Complete your booking with seamless premium options.</p>
+        </article>
+        <article class="process-step reveal-hidden">
+          <span>07</span>
+          <h3>Confirmation</h3>
+          <p>Receive a high-touch confirmation and welcome guidance instantly.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="gallery">
+      <div class="section-intro reveal-hidden">
+        <span class="eyebrow">Collection</span>
+        <h2>Visual narratives for the premium astrology lifestyle.</h2>
+      </div>
+      <div class="media-grid">
+        <div class="video-gallery glass-card">
+          <div class="gallery-header">
+            <h3>Video Gallery</h3>
+            <p>Curated insights and atmospheric clips with elegant premium styling.</p>
+          </div>
+          <div class="video-grid">
+            <article class="video-card interactive" data-cursor-label="Play" data-video="premium-journey">
+              <div class="video-thumb"></div>
+              <div class="video-foot">
+                <span>Astrology Essentials</span>
+                <strong>Understanding Your Natal Chart</strong>
+              </div>
+            </article>
+            <article class="video-card interactive" data-cursor-label="Play" data-video="ritual-essence">
+              <div class="video-thumb"></div>
+              <div class="video-foot">
+                <span>Luxury Rituals</span>
+                <strong>Creating a Sacred Home Practice</strong>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="image-gallery glass-card" aria-label="Image gallery">
+          <div class="gallery-header">
+            <h3>Image Gallery</h3>
+            <p>Modern, calm visuals that reinforce the TS atmosphere.</p>
+          </div>
+          <div class="masonry-grid">
+            <button class="gallery-item size-large interactive" data-cursor-label="View" data-image="image-1"></button>
+            <button class="gallery-item size-small interactive" data-cursor-label="View" data-image="image-2"></button>
+            <button class="gallery-item size-medium interactive" data-cursor-label="View" data-image="image-3"></button>
+            <button class="gallery-item size-small interactive" data-cursor-label="View" data-image="image-4"></button>
+            <button class="gallery-item size-medium interactive" data-cursor-label="View" data-image="image-5"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section surface" id="testimonials">
+      <div class="section-intro reveal-hidden">
+        <span class="eyebrow">Testimonials</span>
+        <h2>Trusted by clients who seek refined astrology with lasting impact.</h2>
+      </div>
+      <div class="testimonial-grid">
+        <article class="testimonial-card reveal-hidden">
+          <p>"TS elevated my confidence and made every recommendation feel exquisitely personal."</p>
+          <span>— Aanya, Founder</span>
+        </article>
+        <article class="testimonial-card reveal-hidden">
+          <p>"The clarity, timing, and luxury of the experience were unlike anything I have seen."</p>
+          <span>— Marc, Executive</span>
+        </article>
+        <article class="testimonial-card reveal-hidden">
+          <p>"A premium astrology service that feels international, grounded, and beautifully composed."</p>
+          <span>— Lina, Creative Director</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section pricing-section" id="pricing">
+      <div class="section-intro reveal-hidden">
+        <span class="eyebrow">Pricing Plans</span>
+        <h2>Premium service levels designed for every chapter of your journey.</h2>
+      </div>
+      <div class="pricing-grid">
+        <article class="pricing-card reveal-hidden">
+          <span class="pricing-tier">Aura</span>
+          <strong>Starter</strong>
+          <p>Ideal for one refined insight session and practical guidance.</p>
+          <ul>
+            <li>Single consultation</li>
+            <li>Report summary</li>
+            <li>Follow-up notes</li>
+          </ul>
+          <a href="#contact" class="button button-outline interactive" data-cursor-label="Book">Choose Aura</a>
+        </article>
+        <article class="pricing-card featured-card reveal-hidden">
+          <span class="pricing-tier">Celestial</span>
+          <strong>Signature</strong>
+          <p>Our premier package for deep chart analysis and luxury support.</p>
+          <ul>
+            <li>Full natal reading</li>
+            <li>Remedy planning</li>
+            <li>Priority booking</li>
+          </ul>
+          <a href="#contact" class="button button-primary interactive" data-cursor-label="Book">Choose Celestial</a>
+        </article>
+        <article class="pricing-card reveal-hidden">
+          <span class="pricing-tier">Lunar</span>
+          <strong>Executive</strong>
+          <p>Ongoing guidance with premium ritual, forecasting, and support.</p>
+          <ul>
+            <li>Monthly consultations</li>
+            <li>VIP access</li>
+            <li>Tailored recommendations</li>
+          </ul>
+          <a href="#contact" class="button button-outline interactive" data-cursor-label="Book">Choose Lunar</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section surface" id="faq">
+      <div class="section-intro reveal-hidden">
+        <span class="eyebrow">FAQs</span>
+        <h2>Answers for clients who expect sophistication and clarity.</h2>
+      </div>
+      <div class="faq-grid">
+        <article class="faq-item reveal-hidden">
+          <h3>Can I choose my astrologer?</h3>
+          <p>Yes. You can review our advisors and choose the guide that best matches your intention.</p>
+        </article>
+        <article class="faq-item reveal-hidden">
+          <h3>How is payment handled?</h3>
+          <p>Payments are secure and support cards, UPI, net banking, wallets, and Razorpay checkout.</p>
+        </article>
+        <article class="faq-item reveal-hidden">
+          <h3>Will the session be private?</h3>
+          <p>Every consultation is handled with the highest discretion and a premium service standard.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="section-intro reveal-hidden">
+        <span class="eyebrow">Book Appointment</span>
+        <h2>Begin your premium astrological consultation today.</h2>
+        <p>Secure your session with TS and receive bespoke guidance tailored to your life path.</p>
+      </div>
+      <div class="contact-grid glass-card reveal-hidden">
+        <div class="contact-panel">
+          <p class="eyebrow">Booking Journey</p>
+          <h3>Book in four elegant steps.</h3>
+          <p>Every interaction is designed to feel calm, premium, and effortless.</p>
+          <div class="booking-progress">
+            <div class="booking-progress-bar"><span id="bookingProgressBar"></span></div>
+            <div class="booking-progress-label" id="bookingProgressLabel">Step 1 of 4</div>
+          </div>
+        </div>
+        <form class="booking-form" id="bookingForm">
+          <div class="booking-step booking-step-active" data-step="1">
+            <label>
+              <span>Choose Service</span>
+              <select name="service" required>
+                <option value="" disabled selected>Select service</option>
+                <option value="kundli">Kundli & Birth Chart</option>
+                <option value="marriage">Marriage Astrology</option>
+                <option value="career">Career Direction</option>
+              </select>
+            </label>
+          </div>
+          <div class="booking-step" data-step="2">
+            <label>
+              <span>Choose Astrologer</span>
+              <select name="astrologer" required>
+                <option value="" disabled selected>Select advisor</option>
+                <option value="arya">Arya — Legacy Specialist</option>
+                <option value="nisha">Nisha — Relationship Expert</option>
+                <option value="rajesh">Rajesh — Career Strategist</option>
+              </select>
+            </label>
+          </div>
+          <div class="booking-step" data-step="3">
+            <label>
+              <span>Choose Date</span>
+              <input type="date" name="date" required />
+            </label>
+            <label>
+              <span>Choose Time</span>
+              <input type="time" name="time" required />
+            </label>
+          </div>
+          <div class="booking-step" data-step="4">
+            <label>
+              <span>Your Name</span>
+              <input type="text" name="name" placeholder="Enter your full name" required />
+            </label>
+            <label>
+              <span>Email Address</span>
+              <input type="email" name="email" placeholder="hello@example.com" required />
+            </label>
+          </div>
+          <div class="booking-actions">
+            <button type="button" class="button button-outline interactive" id="prevStep" data-cursor-label="View">Back</button>
+            <button type="button" class="button button-primary interactive" id="nextStep" data-cursor-label="Continue">Continue</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer surface">
+      <div class="footer-grid">
+        <div>
+          <img src="LOGO.png" alt="TS Logo" class="footer-logo" loading="lazy" decoding="async" />
+          <p>TS is a global luxury astrology brand delivering elegant, trustworthy guidance for the modern visionary.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a class="interactive" href="#why" data-cursor-label="View">Why TS</a>
+          <a class="interactive" href="#services" data-cursor-label="View">Services</a>
+          <a class="interactive" href="#pricing" data-cursor-label="View">Pricing</a>
+          <a class="interactive" href="#contact" data-cursor-label="Book">Contact</a>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <a class="interactive" href="mailto:hello@tsastrology.com" data-cursor-label="Email">hello@tsastrology.com</a>
+          <a class="interactive" href="tel:+1234567890" data-cursor-label="Call">+1 234 567 890</a>
+          <a class="interactive" href="https://wa.me" data-cursor-label="Talk">WhatsApp</a>
+        </div>
+      </div>
+      <div class="footer-end">
+        <p>© 2026 TS. Crafted for luxury astrology.</p>
+      </div>
+    </footer>
+
+    <a class="sticky-booking interactive" href="#contact" data-cursor-label="Book">Book Consultation</a>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <div class="lightbox-backdrop"></div>
+      <div class="lightbox-panel" role="dialog" aria-modal="true">
+        <button class="lightbox-close interactive" id="lightboxClose" data-cursor-label="Close">×</button>
+        <div class="lightbox-content">
+          <div class="lightbox-thumb"></div>
+          <div>
+            <span class="eyebrow">Preview</span>
+            <h3 id="lightboxTitle">Booking Confirmed</h3>
+            <p>Thank you for trusting TS. Your premium astrology appointment has been scheduled.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
