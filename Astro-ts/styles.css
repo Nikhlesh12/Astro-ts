@@ -603,6 +603,7 @@ body.cosmic .featured-card { background: rgba(255,255,255,0.06); }
   }
   .main-nav.open { transform: translateX(0); }
   .main-nav a {
+    display: block;
     width: 100%;
     padding: 0.95rem 0.8rem;
     border-radius: 20px;
@@ -613,6 +614,17 @@ body.cosmic .featured-card { background: rgba(255,255,255,0.06); }
   .main-nav a::after { display: none; }
   .main-nav a + a { margin-top: 0.65rem; }
   .menu-toggle { display: inline-flex; }
+  .topbar { position: relative; }
+  .nav-actions { position: relative; z-index: 46; }
+  .theme-switch {
+    min-width: 44px;
+    width: 44px;
+    height: 44px;
+    padding: 0.9rem;
+    justify-content: center;
+  }
+  .theme-switch .theme-label { display: none; }
+  .button-primary, .button-outline, .button-secondary { min-width: 44px; padding: 0.8rem 1rem; }
   .nav-actions { width: auto; justify-content: flex-end; flex-wrap: wrap; gap: 0.75rem; }
   .button-primary, .button-outline, .button-secondary { width: auto; min-width: 44px; }
   .hero-visual { min-height: auto; padding: 1.75rem; }
