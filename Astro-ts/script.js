@@ -14,6 +14,11 @@ const navClose = document.querySelector('.nav-close');
 const progressBar = document.getElementById('progressBar');
 const lightbox = document.getElementById('lightbox');
 const lightboxClose = document.getElementById('lightboxClose');
+const galleryLightbox = document.getElementById('galleryLightbox');
+const galleryLightboxClose = document.getElementById('galleryLightboxClose');
+const galleryLightboxImage = document.getElementById('galleryLightboxImage');
+const galleryLightboxTitle = document.getElementById('galleryLightboxTitle');
+const galleryLightboxDescription = document.getElementById('galleryLightboxDescription');
 
 let activeStep = 0;
 const storedTheme = localStorage.getItem('ts-theme');
@@ -86,6 +91,34 @@ const closeLightbox = () => {
 lightboxClose.addEventListener('click', closeLightbox);
 lightbox.addEventListener('click', (event) => {
   if (event.target === lightbox) closeLightbox();
+});
+
+const openGalleryLightbox = (item) => {
+  if (!galleryLightbox) return;
+  const title = item.dataset.title || 'Gallery Preview';
+  const description = item.dataset.description || 'A premium visual preview from the TS experience.';
+  const imageClass = item.dataset.image || 'image-1';
+
+  galleryLightboxTitle.textContent = title;
+  galleryLightboxDescription.textContent = description;
+  galleryLightboxImage.className = `gallery-lightbox-image ${imageClass}`;
+  galleryLightbox.classList.add('active');
+  galleryLightbox.setAttribute('aria-hidden', 'false');
+};
+
+const closeGalleryLightbox = () => {
+  if (!galleryLightbox) return;
+  galleryLightbox.classList.remove('active');
+  galleryLightbox.setAttribute('aria-hidden', 'true');
+};
+
+galleryLightboxClose?.addEventListener('click', closeGalleryLightbox);
+galleryLightbox?.addEventListener('click', (event) => {
+  if (event.target === galleryLightbox) closeGalleryLightbox();
+});
+
+document.querySelectorAll('.gallery-item').forEach((item) => {
+  item.addEventListener('click', () => openGalleryLightbox(item));
 });
 
 themeToggle.addEventListener('click', () => setTheme(!themeActive));
