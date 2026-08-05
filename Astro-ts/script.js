@@ -10,6 +10,7 @@ const cursorLabel = cursorWrap.querySelector('.cursor-label');
 const themeToggle = document.querySelector('[data-theme-toggle]');
 const menuToggle = document.querySelector('.menu-toggle');
 const mainNav = document.querySelector('.main-nav');
+const navClose = document.querySelector('.nav-close');
 const progressBar = document.getElementById('progressBar');
 const lightbox = document.getElementById('lightbox');
 const lightboxClose = document.getElementById('lightboxClose');
@@ -94,6 +95,13 @@ menuToggle.addEventListener('click', () => {
   const expanded = mainNav.classList.contains('open');
   menuToggle.setAttribute('aria-expanded', expanded);
 });
+
+if (navClose) {
+  navClose.addEventListener('click', () => {
+    mainNav.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+  });
+}
 
 mainNav.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', () => {
