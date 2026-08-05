@@ -552,7 +552,7 @@ body.cosmic .featured-card { background: rgba(255,255,255,0.06); }
 .lightbox-content { display: grid; grid-template-columns: 1fr 1.35fr; gap: 1.5rem; align-items: center; }
 .lightbox-thumb { min-height: 220px; border-radius: 28px; background: radial-gradient(circle, rgba(212,175,55,0.22), transparent 45%), linear-gradient(180deg, rgba(17,17,17,0.96), rgba(17,17,17,0.7)); }
 .reveal-hidden { opacity: 0; transform: translateY(28px) scale(0.98); filter: blur(6px); }
-..reveal-visible { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); transition: opacity 0.85s ease, transform 0.85s ease, filter 0.85s ease; }
+.reveal-visible { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); transition: opacity 0.85s ease, transform 0.85s ease, filter 0.85s ease; }
 
 @media (max-width: 1080px) {
   .hero-grid, .media-grid, .pricing-grid, .feature-grid, .service-grid, .process-grid, .testimonial-grid, .faq-grid, .footer-grid, .contact-grid, .lightbox-content { grid-template-columns: 1fr; }
