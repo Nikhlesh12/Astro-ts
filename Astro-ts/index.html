@@ -272,11 +272,36 @@
             <p>Modern, calm visuals that reinforce the TS atmosphere.</p>
           </div>
           <div class="masonry-grid">
-            <button class="gallery-item size-large interactive" data-cursor-label="View" data-image="image-1"></button>
-            <button class="gallery-item size-small interactive" data-cursor-label="View" data-image="image-2"></button>
-            <button class="gallery-item size-medium interactive" data-cursor-label="View" data-image="image-3"></button>
-            <button class="gallery-item size-small interactive" data-cursor-label="View" data-image="image-4"></button>
-            <button class="gallery-item size-medium interactive" data-cursor-label="View" data-image="image-5"></button>
+<button class="gallery-item gallery-image-1 size-large interactive" type="button" aria-label="View Stellar Ritual" data-cursor-label="View" data-image="image-1" data-title="Stellar Ritual" data-description="An elevated astrology moment captured with light, texture, and premium atmosphere.">
+          <div class="gallery-item-copy">
+            <span>Preview</span>
+            <strong>Stellar Ritual</strong>
+          </div>
+        </button>
+        <button class="gallery-item gallery-image-2 size-small interactive" type="button" aria-label="View Cosmic Altar" data-cursor-label="View" data-image="image-2" data-title="Cosmic Altar" data-description="A quiet luxury composition with celestial accents and refined visual balance.">
+          <div class="gallery-item-copy">
+            <span>Preview</span>
+            <strong>Cosmic Altar</strong>
+          </div>
+        </button>
+        <button class="gallery-item gallery-image-3 size-medium interactive" type="button" aria-label="View Gold Harmony" data-cursor-label="View" data-image="image-3" data-title="Gold Harmony" data-description="A premium vignette blending rich materials, soft glow, and sophisticated detail.">
+          <div class="gallery-item-copy">
+            <span>Preview</span>
+            <strong>Gold Harmony</strong>
+          </div>
+        </button>
+        <button class="gallery-item gallery-image-4 size-small interactive" type="button" aria-label="View Celestial Room" data-cursor-label="View" data-image="image-4" data-title="Celestial Room" data-description="A polished lifestyle frame designed for a luxury astrology brand experience.">
+          <div class="gallery-item-copy">
+            <span>Preview</span>
+            <strong>Celestial Room</strong>
+          </div>
+        </button>
+        <button class="gallery-item gallery-image-5 size-medium interactive" type="button" aria-label="View Luxe Vision" data-cursor-label="View" data-image="image-5" data-title="Luxe Vision" data-description="A refined reveal that feels premium, layered, and elegant in every detail.">
+          <div class="gallery-item-copy">
+            <span>Preview</span>
+            <strong>Luxe Vision</strong>
+          </div>
+        </button>
           </div>
         </div>
       </div>
@@ -459,6 +484,21 @@
     </footer>
 
     <a class="sticky-booking interactive" href="#contact" data-cursor-label="Book">Book Consultation</a>
+
+    <div class="gallery-lightbox" id="galleryLightbox" aria-hidden="true">
+      <div class="gallery-lightbox-backdrop"></div>
+      <div class="gallery-lightbox-panel" role="dialog" aria-modal="true">
+        <button class="lightbox-close interactive" id="galleryLightboxClose" aria-label="Close preview">×</button>
+        <div class="gallery-lightbox-content">
+          <div class="gallery-lightbox-image gallery-image-1" id="galleryLightboxImage" role="img" aria-label="Gallery preview"></div>
+          <div class="gallery-lightbox-copy">
+            <span class="eyebrow">Gallery preview</span>
+            <h3 id="galleryLightboxTitle">Celestial Image</h3>
+            <p id="galleryLightboxDescription">Experience the refined visual language of TS with elevated atmospheres and premium details.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="lightbox" id="lightbox" aria-hidden="true">
       <div class="lightbox-backdrop"></div>
