@@ -297,7 +297,7 @@ body.cosmic .topbar {
 .nav-close {
   display: none;
   position: absolute;
-  top: 4rem;
+  top: 4rem !important;
   right: 1rem;
   width: 42px;
   height: 42px;
